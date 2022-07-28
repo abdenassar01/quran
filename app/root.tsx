@@ -7,6 +7,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import StylesContext from "./stylesContext";
+import { useContext } from "react";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -15,11 +17,18 @@ export const meta: MetaFunction = () => ({
 });
 
 export default function App() {
+
+  let styles = useContext(StylesContext);
+
   return (
     <html lang="en">
       <head>
         <Meta />
         <Links />
+        { styles !== null && <style>{styles}</style> }
+        {/* <style dangerouslySetInnerHTML={{ __html:</>${styles}<style> }} /> */}
+        {/* { styles !== null && ( <style dangerouslySetInnerHTML={{ __html:</style>${styles}<style> }} />)} */}
+        { styles }
       </head>
       <body>
         <Outlet />
