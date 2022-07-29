@@ -21,11 +21,12 @@ export default function Index() {
             بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ
           </h1>
         </div>
-        <form action="" className="search-form">
+        <form action="/quran" method="GET" className="search-form">
           <div className="searchbar-wrapper">
             <RiSearch2Line size={20} color="#293462"/>
-            <input type="text" className="searchbar" placeholder="what are you looking for?" />
+            <input type="text" name="q" className="searchbar" placeholder="what are you looking for?" />
           </div>
+          <button type="submit" className="submit">Search</button>
         </form>
       </section>
     </main>
