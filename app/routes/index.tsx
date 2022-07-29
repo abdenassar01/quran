@@ -1,5 +1,6 @@
 import Navbar from "~/components/navbar/Navbar"
 import styles from "~/styles/home.css";
+import { RiSearch2Line } from "react-icons/ri"
 
 export function links() {
   return [
@@ -12,12 +13,21 @@ export function links() {
 
 export default function Index() {
   return (
-    <div className="wrapper">
+    <main className="wrapper">
       <Navbar />
-      <div className="content">
-        <h1 >Welcome to Remix</h1>
-        
-      </div>
-    </div>
+      <section className="content">
+        <div className="header-section">
+          <h1 className="big-heading">
+            بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ
+          </h1>
+        </div>
+        <form action="" className="search-form">
+          <div className="searchbar-wrapper">
+            <RiSearch2Line size={20} color="#293462"/>
+            <input type="text" className="searchbar" placeholder="what are you looking for?" />
+          </div>
+        </form>
+      </section>
+    </main>
   );
 }

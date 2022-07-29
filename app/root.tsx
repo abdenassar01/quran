@@ -20,6 +20,11 @@ export function links() {
     { 
       rel: "stylesheet", 
       href: globalStyles
+    },
+    { 
+      rel: "icon", 
+      href: "https://i.imgur.com/WzmrQug.png",
+      sizes: "16x16"
     }
   ];
 }
