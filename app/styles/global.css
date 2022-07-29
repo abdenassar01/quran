@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5%;
+    background-color: #293462;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img{
+    transform: scale(.8);
+}
+
+.logo-header{
+    font-size: 25px;
+    font-family: 'Gochi Hand', cursive;
+    color: white;
+}
+
+.nav{
+    color: white;
+}
+
+.links{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    position: relative;
+}
+
+.link{
+    text-decoration: none;
+    font-weight: 700;
+    font-style: 20px;
+    color: rgb(165, 165, 165);
+    transition: all .3s ease-in-out;
+}
+
+.link:hover{
+    color: white;
+    border-bottom: 2px solid white;
+}

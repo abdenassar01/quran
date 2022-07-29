@@ -1,17 +1,34 @@
-import styled from "styled-components";
+import Navbar from "~/components/navbar/Navbar"
+import styles from "~/styles/home.css";
+import { RiSearch2Line } from "react-icons/ri"
+
+export function links() {
+  return [
+    { 
+      rel: "stylesheet", 
+      href: styles
+    }
+  ];
+}
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <Greeting>Hey</Greeting>
-      </ul>
-    </div>
+    <main className="wrapper">
+      <Navbar />
+      <section className="content">
+        <div className="header-section">
+          <h1 className="big-heading">
+            بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ
+          </h1>
+        </div>
+        <form action="/quran" method="GET" className="search-form">
+          <div className="searchbar-wrapper">
+            <RiSearch2Line size={20} color="#293462"/>
+            <input type="text" name="q" className="searchbar" placeholder="what are you looking for?" />
+          </div>
+          <button type="submit" className="submit">Search</button>
+        </form>
+      </section>
+    </main>
   );
 }
-
-const Greeting = styled.p`
-  font-size: 20px;
-  color: red;
-`
