@@ -13,11 +13,12 @@ export function links() {
 
 function quran() {
   return (
-    <div>
-        <HeroSection />
-        quran
-        <Outlet />
-    </div>
+    <main className="wrapper">
+        <div className="content">
+            <HeroSection />
+            <Outlet />
+        </div> 
+    </main>
   )
 }
 
