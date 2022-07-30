@@ -40,7 +40,7 @@
 }
 
 .searchbar{
-    padding: 5px;
+    padding: 10px 5px;
     border-width: 0;
     width: 100%;
     border-radius: 10px;
@@ -50,4 +50,21 @@
 
 .searchbar:focus{   
     outline: none;
+}
+
+.submit{
+    padding: 10px 20px;
+    margin-right: -10px;
+    border: none;
+    color: rgb(173, 173, 173);
+    background-color: #293462;
+    font-weight: bold;
+    border-radius: 0 5px 5px 0 ;
+    transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.submit:hover{
+    color: white;
+    padding-left: 25px;
+    text-decoration: underline;
 }
