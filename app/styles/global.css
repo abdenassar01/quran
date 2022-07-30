@@ -9,6 +9,15 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #293462;
+    border-radius: 50px;
+}
+
 .header{
     width: 100%;
     display: flex;
