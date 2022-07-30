@@ -55,5 +55,5 @@
 
 .link:hover{
     color: white;
-    border-bottom: 2px solid white;
+    text-decoration: underline;
 }

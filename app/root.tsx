@@ -8,6 +8,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import Navbar from "./components/navbar/Navbar";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -38,6 +39,7 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <Navbar />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
