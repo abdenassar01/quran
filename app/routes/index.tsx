@@ -1,3 +1,4 @@
+import { Link } from "@remix-run/react";
 import { Fragment } from "react";
 import HeroSection from "~/components/hero/HeroSection";
 import Main from "~/components/main/Main";
@@ -17,6 +18,9 @@ export default function Index() {
     <Fragment>
       <HeroSection />
       <Main />
+      <div className="main-button-wrapper">
+        <Link to="/quran" className="btn">Browse Quran</Link>
+      </div>
     </Fragment>
   );
 }

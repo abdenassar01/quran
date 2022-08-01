@@ -3,6 +3,7 @@ import { useParams } from "@remix-run/react"
 function Surah() {
 
     const surah = useParams();
+    
 
   return (
     <div>
