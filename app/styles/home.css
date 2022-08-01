@@ -27,7 +27,7 @@
 .search-form{
     display: grid;
     place-items: center;
-    margin: 30px;
+    margin: 15px;
 }
 
 .searchbar-wrapper{
@@ -67,4 +67,45 @@
     color: white;
     padding-left: 25px;
     text-decoration: underline;
+}
+
+.main-ayah{
+    display: flex;
+    justify-content: center;
+}
+
+.ayah-wrapper{
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    background: rgb(3,13,51);
+    background: linear-gradient(90deg, rgba(3,13,51,1) 25%, rgba(41,52,98,1) 100%);
+    color: #D9D9D9;
+}
+
+.ayah{
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Amiri', serif;
+}
+
+.main-button-wrapper{
+    margin: 70px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    padding: 12px 32px;
+    background: rgb(0, 29, 146);
+    color: #D9D9D9;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+}
+
+.btn:hover{
+    background: linear-gradient(90deg, rgb(0, 48, 240) 25%, rgb(0, 17, 85) 100%);
+    transform: scale(1.1);
 }

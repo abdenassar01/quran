@@ -1,3 +1,5 @@
+import { NavLink } from "@remix-run/react"
+
 type Prop = {
   nbr: number,
   name: string,
@@ -8,7 +10,7 @@ type Prop = {
 
 function Cart(props: Prop) {
   return (
-    <div className="cart">
+    <NavLink to={`/quran/${props.name}`} className="cart">
         <div className="left">
           <div className="number">{ props.nbr }</div>
           <div className="right">
@@ -20,7 +22,7 @@ function Cart(props: Prop) {
           <div className="surah-name">{ props.nameAr }</div>
           <div className="helper-text">{ props.numberOfAyah } Ayahs</div>
         </div>
-    </div>
+    </NavLink>
   )
 }
 
