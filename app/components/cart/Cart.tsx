@@ -10,7 +10,7 @@ type Prop = {
 
 function Cart(props: Prop) {
   return (
-    <NavLink to={`/surah/${props.name}`} className="cart">
+    <NavLink to={`/quran/${props.name}`} className="cart">
         <div className="left">
           <div className="number">{ props.nbr }</div>
           <div className="right">
