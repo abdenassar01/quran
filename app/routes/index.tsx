@@ -1,4 +1,6 @@
+import { Fragment } from "react";
 import HeroSection from "~/components/hero/HeroSection";
+import Main from "~/components/main/Main";
 import styles from "~/styles/home.css";
 
 export function links() {
@@ -12,6 +14,9 @@ export function links() {
 
 export default function Index() {
   return (
-    <HeroSection />
+    <Fragment>
+      <HeroSection />
+      <Main />
+    </Fragment>
   );
 }
