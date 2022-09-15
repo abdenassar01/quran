@@ -23,4 +23,22 @@ export type CartProp = {
     nameTr: string,
     nameAr: string,
     numberOfAyah: number
-  }
+}
+ 
+export type SurahDetails = {
+
+    index: string,
+    name: string,
+    verse: {},
+    count: number,
+    juz: [
+        {
+            index: string,
+            verse: {
+                start: string,
+                end: string
+            }
+        }
+    ]
+
+}

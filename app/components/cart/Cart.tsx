@@ -3,7 +3,7 @@ import { CartProp } from "~/types/Types"
 
 function Cart(props: CartProp) {
   return (
-    <NavLink to={`/quran/${props.name}`} className="cart">
+    <NavLink to={`/quran/${props.nbr}`} className="cart">
         <div className="left">
           <div className="number">{ props.nbr }</div>
           <div className="right">
