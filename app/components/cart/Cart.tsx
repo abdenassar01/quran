@@ -1,14 +1,7 @@
 import { NavLink } from "@remix-run/react"
+import { CartProp } from "~/types/Types"
 
-type Prop = {
-  nbr: number,
-  name: string,
-  nameTr: string,
-  nameAr: string,
-  numberOfAyah: number
-}
-
-function Cart(props: Prop) {
+function Cart(props: CartProp) {
   return (
     <NavLink to={`/quran/${props.name}`} className="cart">
         <div className="left">

@@ -2,12 +2,13 @@ import { useParams } from "@remix-run/react"
 
 function Surah() {
 
-    const surah = useParams();
-    
+  const params = useParams();
+  
+  // https://raw.githubusercontent.com/semarketir/quranjson/master/source/surah/surah_${ index }.json
 
   return (
     <div>
-        $_surah = { surah?._surah }
+        surah Name = { params?._surah }
     </div>
   )
 }
