@@ -1,5 +1,5 @@
 import { LoaderFunction } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { useLoaderData, useTransition } from "@remix-run/react";
 import axios from "axios";
 import Cart from "~/components/cart/Cart"
 import { Surah } from "~/types/Types";
@@ -14,6 +14,10 @@ export const loader: LoaderFunction = async () => {
 function index() {
 
   const data = useLoaderData();
+
+  const transition = useTransition();
+
+  if ( transition.state === "loading" ) return <div>loading ...</div>
 
   return (
     <div className="carts-wrappers">

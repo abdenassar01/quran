@@ -1,5 +1,5 @@
 import { LinksFunction, LoaderFunction } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react"
+import { useLoaderData, useTransition } from "@remix-run/react"
 import axios from "axios";
 import { SurahDetails } from "~/types/Types";
 import surahStyles from "~/styles/surah.css";
@@ -32,6 +32,10 @@ function Surah() {
 
   const data: SurahDetails = useLoaderData();
   const ayahs: string[] = Object.values(data?.verse);
+
+  const transition = useTransition()
+
+  if(transition.state === "loading") return <div>loading...</div>
 
   return (
     <div>
