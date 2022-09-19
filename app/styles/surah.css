@@ -37,3 +37,14 @@
     line-height: 50px;
     color: white !important;
 }
+
+@media screen and (max-width: 768px) {
+    .wrapper{
+        flex-direction: column;
+        gap: 0;
+    }
+    .quran-text{
+        font-size: 16px;
+        line-height: 40px;
+    }
+}

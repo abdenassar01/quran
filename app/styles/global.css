@@ -69,6 +69,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 20px;
+    padding-top: 20px;
 }
 
 .link:hover{
@@ -138,4 +139,11 @@
     padding: 10px 0 10px 0;
     color: #293462;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .cart{
+        min-width: 100%;
+        padding: 5px;
+    }
 }
