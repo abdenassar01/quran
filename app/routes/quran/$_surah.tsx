@@ -3,6 +3,8 @@ import { useLoaderData } from "@remix-run/react"
 import axios from "axios";
 import { SurahDetails } from "~/types/Types";
 import surahStyles from "~/styles/surah.css";
+import asideStyles from "~/styles/aside.css";
+import Aside from "~/components/aside/Aside";
 
 export const loader: LoaderFunction = async ({ params }) => {
   const surah: string = params?._surah
@@ -20,10 +22,9 @@ export const links: LinksFunction = () => {
       href: surahStyles
     },
     { 
-      rel: "icon", 
-      href: "https://i.imgur.com/WzmrQug.png",
-      sizes: "16x16"
-    }
+      rel: "stylesheet", 
+      href: asideStyles
+    } 
   ];
 }
 
@@ -35,14 +36,17 @@ function Surah() {
   return (
     <div>
       <div className="wrapper">
+        <Aside />
+        <div className="content">
           <h2 className="title-heading">
-            { data?.name }
+              { data?.name }
+            </h2>
             <div className="quran-text-wrapper">
               {
                 ayahs.map(ayah => <span key={ ayah } className="quran-text">{ ayah + " ۝ " }   </span>)
               }
             </div>
-          </h2>
+        </div>  
       </div>
     </div>
   )

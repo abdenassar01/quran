@@ -19,7 +19,7 @@
 }
 
 .big-heading{
-    font-size: 32px;
+    font-size: 25px;
     font-family: 'Amiri', serif;
     color: #293462;
 }
@@ -27,7 +27,6 @@
 .search-form{
     display: grid;
     place-items: center;
-    margin: 15px;
 }
 
 .searchbar-wrapper{
