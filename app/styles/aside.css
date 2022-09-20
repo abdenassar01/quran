@@ -1,0 +1,44 @@
+.aside-wrapper{
+    min-width: 150px;
+    max-height: 80vh;
+    margin-top: -120px;
+    border-radius: 10px;
+    padding: 5px 0;
+    background-color: #0B2239;
+    overflow-x: scroll;
+}
+
+.item{
+    width: 90%;
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+    font-family: 'Amiri', serif;
+    font-weight: bold;
+    display: flex;
+    border-radius: 0 50px 50px 0;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+}
+
+.item[aria-current="page"]{
+    color: #0B2239;
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .aside-wrapper{
+        display: flex;
+        gap: 5px;
+        padding: 0 0 5px 5px;
+        margin-top: 20px;
+        max-width: 90vw;
+        overflow: scroll;
+    }
+
+    .item{
+        padding: 0 42px;
+        border-radius: 0 0 10px 10px;
+        margin: 0 5px;
+    }
+}
