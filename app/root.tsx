@@ -7,6 +7,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useCatch,
 } from "@remix-run/react";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
@@ -48,5 +49,33 @@ export default function App() {
         <LiveReload />
       </body>
     </html>
+  );
+}
+
+export function CatchBoundary() {
+  const caught = useCatch();
+
+  return (
+    <html lang="en">
+    <head>
+      <Meta />
+      <Links />
+    </head>
+    <body>
+      <Navbar />
+      <div className="error-wrapper">
+        <h1>Caught</h1>
+        <p>Status: {caught.status}</p>
+        <pre>
+          <code>{JSON.stringify(caught.data, null, 2)}</code>
+        </pre>
+      </div>
+      <Footer />
+      <ScrollRestoration />
+      <Scripts />
+      <LiveReload />
+    </body>
+  </html>
+    
   );
 }
